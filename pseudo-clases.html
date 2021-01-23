@@ -16,19 +16,26 @@
     } */
 
 /* Ejemplo para aplicar las propiedades a los pares (2n) = (2 * 0) */
-    p:nth-child(2n) {
+    /* p:nth-child(2n) {
         color:red;
-    }
+    } */
 
 /* Ejemplo para aplicar las propiedades a los impares (2n+1) = (2 * 0 + 1) */
-    p:nth-child(2n+1) {
+    /* p:nth-child(2n+1) {
         color:blue;
+    } */
+
+/* Pseudo elementos */
+/* Se aplican los atributos a la primer letra del primer elemento */
+    p::first-letter {
+        color:red;
+        font-size: 20px;
     }
 
 </style>
 
 <body>
-    <p>🐰 Rabbit</p>
+    <p>Rabbit</p>
     <p>🐶 Dog</p>
     <p>🐮 Cow</p>
     <p>🐸 Frog</p>
