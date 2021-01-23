@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+/* Se aplican los atributos al primer y al ultimo elemento
+    p:first-child {
+        color : red;
+    }
+    p:last-child {
+        color : yellow;
+    } */
+
+/* Ejemplo para aplicar las propiedades a los pares (2n) = (2 * 0) */
+    p:nth-child(2n) {
+        color:red;
+    }
+
+/* Ejemplo para aplicar las propiedades a los impares (2n+1) = (2 * 0 + 1) */
+    p:nth-child(2n+1) {
+        color:blue;
+    }
+
+</style>
+
+<body>
+    <p>🐰 Rabbit</p>
+    <p>🐶 Dog</p>
+    <p>🐮 Cow</p>
+    <p>🐸 Frog</p>
+    <p>🐴 Horse</p>
+</body>
+
+</html>
