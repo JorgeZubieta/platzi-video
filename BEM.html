@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM</title>
+</head>
+
+<style>
+    .header__button--red{
+        color: white;
+        background: red;
+    }
+    .header__button--yellow{
+        color: black;
+        background: yellow;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!-- header : bloque, button : elemento, red : modificador -->
+        <button class="header__button--red">
+            RED
+        </button>
+        <!-- header : bloque, button : elemento, red : modificador -->
+        <button class="header__button--yellow">
+            YELLOW
+        </button>
+    </header>
+</body>
+</html>

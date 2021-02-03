@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologia OOCSS</title>
+</head>
+
+
+<style>
+    /* objeto global : estilo que se aplicara al header y footer */
+    .globalwidth {
+        width: 100%;
+        }
+
+    .header{
+        /* width: 100%; */
+        background: black;
+        color:red;
+    }
+    .footer{
+        /* width: 100%; */
+        background: silver;
+    }
+</style>
+    
+<body>
+    <header class="header" globalwidth>
+        HEADER
+    </header>
+    <footer class="footer" globalwidth> 
+        FOOTER
+    </footer>
+</body>
+</html>
