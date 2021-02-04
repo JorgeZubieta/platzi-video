@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platzi Video</title>
+</head>
+
+<style>
+    body {
+        /* este margen se aplica al margen de la web por defecto. */
+        margin: 0px;
+        background-color: #AB88FF;
+    }
+
+    .header {
+        /* al colocar un numero hexadecimal debemos si o si poner el numeral */
+        background-color: #AB88FF;
+        /* al usar el % definimos que el ancho que ocupara sera el total de la pantalla */
+        width: 100%;
+        height: 80px;  
+    }
+
+    .header__img { 
+        width: 200px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .header__menu{
+        margin-right: 30px;
+    }   
+    /* se define de la siguiente forma porque no utilice una clase */
+    .header__menu ul {
+        /* none oculta el display */
+        /* display: none; */
+        /* ocultamos los puntos del item */
+        list-style: none;
+        /* eliminamos los padding que tienen por defecto */
+        padding: 0px;
+        /* abosulte: para luego posicionarlo como queramos en relacion al padre */
+        position: absolute;
+        width: 100px;
+        text-align: right;
+
+        margin: 0px 0px 0px -18px ;
+    }
+    
+    .header__menu_profile {
+        margin: 18px;
+    }
+
+
+</style>
+
+<body>
+    <header class="header">
+        <img class="header__img" src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" alt="file not found">
+        <div class="header__menu">
+            <div class="header__menu_profile">
+                <img src="./img/user-icon.png" alt="">
+                <p>Profile</p>
+            </div>
+            <!-- como no pusimos una clase dentro de ul en style irira asi .herader__menu ul -->
+            <ul>
+                <li>
+                    <a href="">Account</a>
+                </li>
+                <li>
+                    <a href="">Log out</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+</body>
+</html>
