@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- tipografia de google Mulish -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+    
     <title>Platzi Video</title>
 </head>
 
@@ -11,6 +16,7 @@
         /* este margen se aplica al margen de la web por defecto. */
         margin: 0px;
         background-color: #AB88FF;
+        font-family: 'Mulish', sans-serif;
     }
 
     .header {
@@ -19,20 +25,26 @@
         /* al usar el % definimos que el ancho que ocupara sera el total de la pantalla */
         width: 100%;
         height: 80px;  
+        /* alineamos los elementos de header */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .header__img { 
-        width: 200px;
-        margin-top: 10px;
+        width: 180px;
+        margin-top: 0px;
         margin-left: 10px;
     }
     .header__menu{
-        margin-right: 30px;
+        margin-right: 15px;
     }   
-    /* se define de la siguiente forma porque no utilice una clase */
+
+    /* se define de la siguiente forma porque no utilice una clase para ul*/
     .header__menu ul {
-        /* none oculta el display */
-        /* display: none; */
+        /* none oculta el display, el cual va verse con el puntero e clual
+        activa el menu desplegable con display : block */
+        display: none;
         /* ocultamos los puntos del item */
         list-style: none;
         /* eliminamos los padding que tienen por defecto */
@@ -41,22 +53,50 @@
         position: absolute;
         width: 100px;
         text-align: right;
-
-        margin: 0px 0px 0px -18px ;
-    }
-    
-    .header__menu_profile {
-        margin: 18px;
+        /* pero al final regrese a este ejemplo para despues alinear los elemnetos del header  */
+        /* margin: 0px 0px 0px -18px; ESTE ME CAUSO EL DEFASAJE!!!!!!*/
+        margin: 0px;
     }
 
+    /* efecto hover sobre el menu el cual hace visible el menu efecto al usar display : none, blcok! */
+    .header__menu:hover ul, ul:hover {
+        display: block;
+    }
 
+    .header__menu li {
+        /* ponemos un  margen para separar el menu desplegable */
+        margin: 10px 0px;
+    }
+
+    .header__menu li a {
+        color: white;
+        /* eliminamos el subrayado del texto de los li */
+        text-decoration: none;
+    }
+
+    .header__menu li a:hover {
+        color: white;
+        /* agregamos el efecto hover. Subrayado del texto de los li */
+        text-decoration: underline;
+    }
+
+    .header__menu-profile {
+        margin: 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    .header__menu-profile p {
+        margin: 0px 0px 0px 10px;
+        color: white;
+    }
 </style>
 
 <body>
     <header class="header">
         <img class="header__img" src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" alt="file not found">
         <div class="header__menu">
-            <div class="header__menu_profile">
+            <div class="header__menu-profile">
                 <img src="./img/user-icon.png" alt="">
                 <p>Profile</p>
             </div>
