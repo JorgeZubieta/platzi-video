@@ -15,13 +15,13 @@
     body {
         /* este margen se aplica al margen de la web por defecto. */
         margin: 0px;
-        background-color: #AB88FF;
+        background-color: #8f57fd;
         font-family: 'Mulish', sans-serif;
     }
 
     .header {
         /* al colocar un numero hexadecimal debemos si o si poner el numeral */
-        background-color: #AB88FF;
+        background-color: #8f57fd;
         /* al usar el % definimos que el ancho que ocupara sera el total de la pantalla */
         width: 100%;
         height: 80px;  
@@ -90,9 +90,34 @@
         margin: 0px 0px 0px 10px;
         color: white;
     }
+
+    .main{
+        /* preparamos el alto para despues usarlo con flex */
+        height: 300px;
+    }
+    .main_title{
+        font-size: 25px;
+        color: white;
+    }
+    .input{
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 2px solid white;
+        border-radius: 30px;
+        color: white;
+        font-family: 'Mulish', sans-serif;
+        font-size: 16px;
+        height: 50px;
+        padding: 0px 20px;
+        width: 70%; /* valor relativo, nos ayudan para autoajustarse al size de la pantalla */
+        outline: none;
+    }
+    ::placeholder{
+        color: white;
+    }
 </style>
 
 <body>
+    <!-- <header> -->
     <header class="header">
         <img class="header__img" src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" alt="file not found">
         <div class="header__menu">
@@ -111,5 +136,14 @@
             </ul>
         </div>
     </header>
+    <!-- </header> -->
+    
+    <!-- buscador -->
+    <section class="main">
+        <h2 class="main_title">¿Que quieres ver hoy?</h2>
+        <input class="input" type="text" placeholder="Buscar...">
+        <!-- main_input lo cambiamos porque mas adelante no podria usarlo, quedaria anclado el main -->
+    </section>
+    <!-- /buscador -->
 </body>
 </html>
