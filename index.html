@@ -18,7 +18,7 @@
         background-color: #8f57fd;
         font-family: 'Mulish', sans-serif;
     }
-
+    /* header */
     .header {
         /* al colocar un numero hexadecimal debemos si o si poner el numeral */
         background-color: #8f57fd;
@@ -90,7 +90,9 @@
         margin: 0px 0px 0px 10px;
         color: white;
     }
+    /* /header */
 
+    /* buscador */
     .main{
         /* preparamos el alto para despues usarlo con flex */
         height: 300px;
@@ -114,9 +116,51 @@
     ::placeholder{
         color: white;
     }
+    /* /buscador */
+
+    /* carousel */
+    .carousel{
+        width: 100%;
+        overflow: scroll; /* creaos el scroll */
+        padding: 30px;
+        position: relative;
+    }
+    .carousel__container {
+        white-space: nowrap;
+        padding-bottom: 10px;
+        margin: 70px 0px; /* para el hover */
+    }
+    .carousel__item {
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        background-color: pink;
+        overflow: hidden; /* para que la imagen tome el border radius */
+        margin-right: 10px; /* espacio enter catricas */
+        display: inline-block;
+        cursor: pointer;
+
+        /* como hacer la transicion mas fluida! */
+        transition: 450ms all; /* timepo de transcision */
+        transform-origin: center left;
+    }
+    .carousel__item:hover ~ .carousel__item {
+        transform: translate3d(100px, 0, 0);
+        /* cuanod hagamos hover sobre la cartica, todos los elemetos se van a ir a la derecha porque el elemento seleccionado tendra un zoom */
+        /* la virgulilla afecta a todos los elementos */
+    }
+    .carousel__container:hover .carousel__item {
+        opacity: 0.3;
+    }
+    .carousel__container:hover .carousel__item:hover {
+        transform: scale(1.5); /* zoom a la cartilla que se le hace hover */
+        opacity: 1; /* 1 es la luminosidad original */
+    }
+    /* /carousel */
 </style>
 
 <body>
+
     <!-- <header> -->
     <header class="header">
         <img class="header__img" src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" alt="file not found">
@@ -145,5 +189,18 @@
         <!-- main_input lo cambiamos porque mas adelante no podria usarlo, quedaria anclado el main -->
     </section>
     <!-- /buscador -->
+    
+    <!-- carousel -->
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel__item">
+            </div>
+            <div class="carousel__item">
+            </div>
+            <div class="carousel__item">
+            </div>
+        </div>
+    </section>
+    <!-- /carousel -->
 </body>
 </html>
