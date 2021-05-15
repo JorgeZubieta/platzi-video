@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Title -->
+    <title>Iniciar Sesión</title>
+    <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Muli', sans-serif;
+    }
+    .header {
+        align-items: center;
+        background-color: #21c08b;
+        color: white;
+        display: flex;
+        height: 100px;
+        justify-content: space-between;
+        top: 0px;
+        width: 100%;
+    }
+    .header__img {
+        margin-left: 30px;
+        width: 200px;
+    }
+</style>
+
+<body>
+    <!-- <header> -->
+    <header class="header">
+        <img class="header__img" src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" alt="Platzi Video">
+    </header>
+    <!-- </header> -->
+    
+    <!-- a continuacion separamos con una seccion el heasder y el div -->
+    <section class="login">
+        <section class="login__container">
+            <h2>Inicia sesión</h2>
+            <form class="login__container--form">
+                <input class="input" type="text" placeholder="Correo">
+                <!-- input no lleva BEM porque es algo que vamos a reutilizar -->
+                <input class="input" type="password" placeholder="Contraseña">
+                <button class="button">Iniciar sesión</button>
+                <div class="login__container--remember-me">
+                    <label>
+                        <input type="checkbox" name="" id="cbox1" value="checkbox">Recuérdame
+                    </label>
+                    <a href="/">Olvidé mi contraseña</a>
+                </div>
+            </form>
+            <section class="login__container--social-media">
+            <div><img src="./assets/google-icon.webp" alt="Google">Inicia sesión con Google</div>
+            <div><img src="./assets/twitter-icon.webp" alt="Twitter">Inicia sesión con Twitter</div>
+            </section>
+            <p class="login__container--register">No tienes ninguna cuenta <a href="">Regístrate</a></p>
+        </section>
+    </section>
+    
+    <footer class="footer">
+        <!-- "/" para trabajar con react mas adelante -->
+        <a href="/">Términos de uso</a>
+        <a href="/">Declaración de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+    </footer>
+    
+    <script type="text/javascript">(function(){window['__CF$cv$params']={r:'622a5f98f9ee08b8',m:'bdab5ee5ee94815fa9b208c1c999095ae7577294-1613511064-1800-AQ6G+BXXAnVOnDCn8gkEPhWkymEJjlz5v+fZ/ToJOzPfb3bHi4mWHHOeQCKZKmfBmGh9QBfoWb9nFmIrzQAXfJlzWtAuCeP8w83+KKnbVK2+zn9V+QUrCfTv36eAlB7jehdmHQU2eIE0uHwuxBWcXSjkwc048mvxLn52W9ftrkzDAb/go1z1MgYpUuwcZEDU62pZ/5LXCWp/AipJh4R2DbQ7MhEbX6iP0nV92sAkfqfzKVIqjWeHEMbTRqx1vusC2sg8JXfR9cyD8u3XQJblq7t1e0XWVpkTVGdyqRVxYcOR',s:[0xc9a25acd4e,0x0ba4417a6e],}})();
+    </script>
+</body>
+</html>
