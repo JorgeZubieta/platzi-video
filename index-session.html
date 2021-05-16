@@ -13,26 +13,7 @@
     <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
 </head>
 
-<style>
-    body {
-        margin: 0;
-        font-family: 'Muli', sans-serif;
-    }
-    .header {
-        align-items: center;
-        background-color: #21c08b;
-        color: white;
-        display: flex;
-        height: 100px;
-        justify-content: space-between;
-        top: 0px;
-        width: 100%;
-    }
-    .header__img {
-        margin-left: 30px;
-        width: 200px;
-    }
-</style>
+<!-- movimos el codigo a un archivo styles.css -->
 
 <body>
     <!-- <header> -->
@@ -49,10 +30,13 @@
                 <input class="input" type="text" placeholder="Correo">
                 <!-- input no lleva BEM porque es algo que vamos a reutilizar -->
                 <input class="input" type="password" placeholder="Contraseña">
+                
                 <button class="button">Iniciar sesión</button>
+                
                 <div class="login__container--remember-me">
-                    <label>
+                    <label> 
                         <input type="checkbox" name="" id="cbox1" value="checkbox">Recuérdame
+                        <!-- corregimos el size en el css usando el label para recuerdame -->
                     </label>
                     <a href="/">Olvidé mi contraseña</a>
                 </div>
